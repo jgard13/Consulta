@@ -1,0 +1,19 @@
+<div class="card">
+  @if (product.imageUrl) {
+    <img [src]="product.imageUrl" [alt]="product.name" class="card-img" />
+  }
+  <div class="card-content">
+    <h3 class="card-title">{{ product.name }}</h3>
+    <p class="card-category">{{ product.category }}</p>
+    <p class="card-description">{{ product.description }}</p>
+    
+    <div class="card-footer">
+      <span class="card-price">${{ product.price }}</span>
+      @if (product.inStock) {
+        <span class="badge in-stock">En Stock</span>
+      } @else {
+        <span class="badge out-of-stock">Agotado</span>
+      }
+    </div>
+  </div>
+</div>

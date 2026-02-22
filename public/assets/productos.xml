@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+  <product>
+    <id>1</id>
+    <name>Laptop Pro 15"</name>
+    <price>1299.99</price>
+    <imageUrl>https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&amp;fit=crop&amp;w=800&amp;q=80</imageUrl>
+    <category>Electrónica</category>
+    <description>Potente laptop para profesionales con 16GB de RAM y 512GB SSD. Perfecta para diseño, programación y tareas exigentes.</description>
+    <inStock>true</inStock>
+  </product>
+  <product>
+    <id>2</id>
+    <name>Auriculares Inalámbricos Noise-Canceling</name>
+    <price>249.50</price>
+    <imageUrl>https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?auto=format&amp;fit=crop&amp;w=800&amp;q=80</imageUrl>
+    <category>Audio</category>
+    <description>Auriculares premium con cancelación de ruido activa de última generación. Autonomía de 30 horas con una sola carga.</description>
+    <inStock>true</inStock>
+  </product>
+  <product>
+    <id>3</id>
+    <name>Monitor 4K Ultrawide 34"</name>
+    <price>599.00</price>
+    <imageUrl>https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&amp;fit=crop&amp;w=800&amp;q=80</imageUrl>
+    <category>Periféricos</category>
+    <description>Monitor inmersivo ideal para productividad y gaming con panel IPS, resolución 4K y AMD FreeSync.</description>
+    <inStock>false</inStock>
+  </product>
+  <product>
+    <id>4</id>
+    <name>Teclado Mecánico RGB</name>
+    <price>89.99</price>
+    <imageUrl>https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&amp;fit=crop&amp;w=800&amp;q=80</imageUrl>
+    <category>Accesorios</category>
+    <description>Teclado con switches mecánicos táctiles, retroiluminación RGB personalizable y diseño ergonómico.</description>
+    <inStock>true</inStock>
+  </product>
+  <product>
+    <id>5</id>
+    <name>Silla Ergonómica de Oficina</name>
+    <price>199.99</price>
+    <imageUrl>https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?auto=format&amp;fit=crop&amp;w=800&amp;q=80</imageUrl>
+    <category>Mobiliario</category>
+    <description>Silla de oficina con soporte lumbar ajustable, malla transpirable y reposabrazos 3D para máxima comodidad.</description>
+    <inStock>true</inStock>
+  </product>
+</products>
