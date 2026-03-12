@@ -8,7 +8,6 @@ export class ProductsService {
   constructor(private http: HttpClient) {}
 
   getAll(): Observable<Product[]> {
-    // Pedimos el XML como texto plano
     return this.http.get('/assets/productos.xml', { responseType: 'text' }).pipe(
       map((xmlText) => this.parseProductsXml(xmlText))
     );
@@ -18,7 +17,6 @@ export class ProductsService {
     const parser = new DOMParser();
     const doc = parser.parseFromString(xmlText, 'application/xml');
 
-    // Si el XML está mal formado, normalmente aparece <parsererror>
     if (doc.getElementsByTagName('parsererror').length > 0) {
       return [];
     }

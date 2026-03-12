@@ -1,12 +1,18 @@
 <header class="header">
-  <h1>Catálogo</h1>
-  <p>Practica 1 Consulta Jonathan Gael Garcia Rodriguez 22300903 8F</p>
+  <div class="header-inner">
+    <h1>🛍 Catálogo de Productos</h1>
+    <p>Practica 1 Consulta — Jonathan Gael Garcia Rodriguez — 22300903 — 8F</p>
+  </div>
 </header>
 
-<section class="grid">
-  @for (p of products(); track p.id) {
-    <app-product-card [product]="p"></app-product-card>
-  }
-</section>
+<main class="layout">
+  <section class="grid">
+    @for (p of products(); track p.id) {
+      <app-producto-card [product]="p" />
+    }
+  </section>
 
-
+  <aside class="sidebar">
+    <app-carrito />
+  </aside>
+</main>

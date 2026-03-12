@@ -1,42 +1,52 @@
 .card {
   border: 1px solid #e5e7eb;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
   background: white;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
 }
 
 .card-img {
   width: 100%;
-  height: 200px;
+  height: 180px;
   object-fit: cover;
 }
 
 .card-content {
   padding: 16px;
-}
-
-.card-title {
-  margin: 0 0 8px 0;
-  font-size: 1.125rem;
-  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .card-category {
   color: #6b7280;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  margin: 0 0 8px 0;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin: 0 0 6px;
+}
+
+.card-title {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
 }
 
 .card-description {
   color: #4b5563;
   font-size: 0.875rem;
-  margin: 0 0 16px 0;
+  margin: 0 0 12px;
+  flex: 1;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -47,28 +57,44 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 16px;
+  margin-bottom: 12px;
 }
 
 .card-price {
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: #111827;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #1e40af;
 }
 
 .badge {
-  padding: 4px 8px;
+  padding: 3px 10px;
   border-radius: 9999px;
-  font-size: 0.75rem;
-  font-weight: 500;
+  font-size: 0.7rem;
+  font-weight: 600;
 }
 
-.in-stock {
-  background-color: #d1fae5;
-  color: #065f46;
+.in-stock { background-color: #d1fae5; color: #065f46; }
+.out-of-stock { background-color: #fee2e2; color: #991b1b; }
+
+.add-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #1e40af;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
-.out-of-stock {
-  background-color: #fee2e2;
-  color: #991b1b;
+.add-btn:hover:not(:disabled) {
+  background-color: #1e3a8a;
+}
+
+.add-btn:disabled {
+  background-color: #d1d5db;
+  color: #9ca3af;
+  cursor: not-allowed;
 }

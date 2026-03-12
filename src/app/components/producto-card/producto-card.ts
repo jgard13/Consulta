@@ -1,13 +1,20 @@
-import { Component, Input } from "@angular/core";
-import { Product } from "../../models/producto/producto.model";
+import { Component, Input } from '@angular/core';
+import { Product } from '../../models/producto/producto.model';
+import { CarritoService } from '../../services/carrito/carrito';
 
 @Component({
-  selector: 'app-product-card',
-  standalone:true,
-  templateUrl:'./producto-card.html',
-  styleUrls:['./producto-card.css'],
+  selector: 'app-producto-card',
+  standalone: true,
+  imports: [],
+  templateUrl: './producto-card.html',
+  styleUrl: './producto-card.css'
 })
+export class ProductoCardComponent {
+  @Input({ required: true }) product!: Product;
 
-export class ProductCardComponent{
-  @Input({required:true}) product !: Product;
+  constructor(private carritoService: CarritoService) {}
+
+  addToCart(): void {
+    this.carritoService.addToCart(this.product);
+  }
 }

@@ -3,10 +3,9 @@
     <img [src]="product.imageUrl" [alt]="product.name" class="card-img" />
   }
   <div class="card-content">
-    <h3 class="card-title">{{ product.name }}</h3>
     <p class="card-category">{{ product.category }}</p>
+    <h3 class="card-title">{{ product.name }}</h3>
     <p class="card-description">{{ product.description }}</p>
-    
     <div class="card-footer">
       <span class="card-price">${{ product.price }}</span>
       @if (product.inStock) {
@@ -15,5 +14,11 @@
         <span class="badge out-of-stock">Agotado</span>
       }
     </div>
+    <button
+      class="add-btn"
+      [disabled]="!product.inStock"
+      (click)="addToCart()">
+      🛒 Agregar al carrito
+    </button>
   </div>
 </div>

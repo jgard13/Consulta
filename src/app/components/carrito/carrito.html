@@ -1,0 +1,33 @@
+<div class="cart">
+  <h2 class="cart-title">🛒 Carrito de Compras</h2>
+
+  @if (items.length === 0) {
+    <p class="empty">Tu carrito está vacío.</p>
+  } @else {
+    <div class="cart-list">
+      @for (item of items; track item.product.id) {
+        <div class="cart-item">
+          <div class="item-info">
+            <span class="item-name">{{ item.product.name }}</span>
+            <span class="item-sub">${{ item.product.price.toFixed(2) }} × {{ item.quantity }}</span>
+          </div>
+          <div class="item-right">
+            <span class="item-total">${{ (item.product.price * item.quantity).toFixed(2) }}</span>
+            <button class="remove-btn" (click)="remove(item.product.id)">✕</button>
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="cart-footer">
+      <div class="total-row">
+        <span>Total:</span>
+        <span class="total-amount">${{ total.toFixed(2) }}</span>
+      </div>
+      <div class="action-btns">
+        <button class="clear-btn" (click)="clear()">Vaciar</button>
+        <button class="download-btn" (click)="downloadReceipt()">⬇ Descargar Recibo XML</button>
+      </div>
+    </div>
+  }
+</div>
